@@ -3,18 +3,21 @@ import { menuArray } from './data.js'
 const orderedItems = []
 
 
-// document.addEventListener("submit", function (e) {
-//     if (e.target.id == 'form') {
-//         document.querySelector(".overlay").classList.add("hidden");
-//         document.querySelector(".modal").classList.add("hidden");
-//         orderedItems.length = 0
-//         getOrderHtml(orderedItems);
-//         document.getElementById("order-conf").classList.remove("hidden");
+document.addEventListener("submit", function (e) {
 
-//     }
+    if (e.target.id == 'form') {
+        e.preventDefault();
+        document.querySelector(".overlay").classList.add("hidden");
+        document.querySelector(".modal").classList.add("hidden");
+        orderedItems.length = 0
+        getOrderHtml(orderedItems);
+        document.getElementById("order-conf").classList.remove("hidden");
 
-// }
-// )
+    }
+
+
+}
+)
 
 
 
@@ -43,15 +46,15 @@ document.addEventListener("click", function (e) {
         document.querySelector(".modal").classList.add("hidden");
     }
 
-    else if (e.target.id == 'pay-btn') {
+    // else if (e.target.id == 'pay-btn') {
 
-        document.querySelector(".overlay").classList.add("hidden");
-        document.querySelector(".modal").classList.add("hidden");
-        orderedItems.length = 0
-        getOrderHtml(orderedItems)
-        document.getElementById("order-conf").classList.remove("hidden");
+    //     document.querySelector(".overlay").classList.add("hidden");
+    //     document.querySelector(".modal").classList.add("hidden");
+    //     orderedItems.length = 0
+    //     getOrderHtml(orderedItems)
+    //     document.getElementById("order-conf").classList.remove("hidden");
 
-    }
+    // }
 
 })
 
