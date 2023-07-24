@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <header>
+        <h1>Jimmy's Diner</h1>
+        <p class="header-paragraph">The best burgers and pizzas in town</p>
+    </header>
+
+    <section class="menu" id="menu"></section>
+
+    <div class="cart hidden" id="cart">
+        <h2 class="cart-title">Your order</h2>
+        <div class="order-list" id="order-list">
+            <!-- ordered items go here -->
+        </div>
+
+        <hr>
+
+        <div class="div-total">
+            <span class="cart-total">Total</span>
+
+            <span class="cart-total-price" id="total-price"></span>
+        </div>
+        <button class="complete-btn" id="modal">complete order</button>
+
+    </div>
+
+    <section id="order-conf" class="hidden">
+        <div class="order-conf">
+            <p class="thank-msg"> Thank You! Your order is on the way!</p>
+        </div>
+    </section>
+
+
+    <!-- The overlay element -->
+    <div class="overlay hidden"></div>
+    <section class="modal hidden">
+
+        <form id="form">
+
+            <!-- The modal content -->
+            <h3>Enter card details</h3>
+            <input type="text" required placeholder="Enter your name" onfocus="this.value=''"></input>
+            <input type="text" required placeholder="Enter card number" onfocus="this.value=''"></input>
+            <input type="text" required placeholder="Enter CVV" onfocus="this.value=''"></input>
+
+            <button type="submit" class="complete-btn" id="pay-btn">Pay</button>
+
+            <!-- The close button -->
+            <button class="btn-close" id="close">X</button>
+
+        </form>
+    </section>
+
+
+
+</body>
+
+<script src="index.js" type="module" defer></script>
+
+</html>
